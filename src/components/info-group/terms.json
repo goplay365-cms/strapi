@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_info_group_terms",
+  "info": {
+    "displayName": "Terms",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
