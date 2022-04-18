@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "languages",
+  "collectionName": "positions",
   "info": {
-    "singularName": "language",
-    "pluralName": "languages",
-    "displayName": "Language",
+    "singularName": "position",
+    "pluralName": "positions",
+    "displayName": "Position",
     "description": ""
   },
   "options": {
@@ -17,14 +17,20 @@
   },
   "attributes": {
     "name": {
-      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
+      "type": "string",
       "required": true,
       "unique": true
+    },
+    "markets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::market.market",
+      "mappedBy": "positions"
     }
   }
 }

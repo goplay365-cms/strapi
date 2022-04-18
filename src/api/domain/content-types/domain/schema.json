@@ -20,11 +20,11 @@
       "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
       "required": true,
-      "unique": false
+      "unique": true
     },
     "terms": {
       "type": "component",
@@ -74,9 +74,18 @@
     },
     "main_tournaments": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::main-tournament.main-tournament",
-      "inversedBy": "domains"
+      "relation": "oneToMany",
+      "target": "api::tournament.tournament"
+    },
+    "main_markets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::market.market"
+    },
+    "fast_codes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::fast-code.fast-code"
     }
   }
 }

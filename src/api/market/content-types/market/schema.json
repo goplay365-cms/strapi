@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "sports",
+  "collectionName": "markets",
   "info": {
-    "singularName": "sport",
-    "pluralName": "sports",
-    "displayName": "Sport",
+    "singularName": "market",
+    "pluralName": "markets",
+    "displayName": "Market",
     "description": ""
   },
   "options": {
@@ -17,26 +17,26 @@
   },
   "attributes": {
     "name": {
-      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
+      "type": "string",
       "required": true,
       "unique": true
     },
-    "markets": {
+    "positions": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::market.market",
-      "mappedBy": "sport"
+      "relation": "manyToMany",
+      "target": "api::position.position",
+      "inversedBy": "markets"
     },
-    "regions": {
+    "sport": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::region.region",
-      "mappedBy": "sport"
+      "relation": "manyToOne",
+      "target": "api::sport.sport",
+      "inversedBy": "markets"
     }
   }
 }
