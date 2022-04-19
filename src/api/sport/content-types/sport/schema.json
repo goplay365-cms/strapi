@@ -24,7 +24,7 @@
         }
       },
       "required": true,
-      "unique": true
+      "unique": false
     },
     "markets": {
       "type": "relation",
