@@ -87,7 +87,7 @@ module.exports = {
                         translation: obj[o][k][m],
                         locale: loc(o)
                       }
-                    })
+                    });
                   }
                 }
               }
