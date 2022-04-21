@@ -41,6 +41,11 @@
       "type": "integer",
       "required": true,
       "default": 0
+    },
+    "special_values": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::special-value.special-value"
     }
   }
 }
