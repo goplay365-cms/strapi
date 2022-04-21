@@ -4,7 +4,8 @@
   "info": {
     "singularName": "region",
     "pluralName": "regions",
-    "displayName": "Region"
+    "displayName": "Region",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -35,6 +36,16 @@
       "relation": "oneToMany",
       "target": "api::tournament.tournament",
       "mappedBy": "region"
+    },
+    "fKey": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "required": true,
+      "default": 0
     }
   }
 }

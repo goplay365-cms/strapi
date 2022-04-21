@@ -24,13 +24,23 @@
       },
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "markets": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::market.market",
       "mappedBy": "positions"
+    },
+    "fKey": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "required": true,
+      "default": 0
     }
   }
 }

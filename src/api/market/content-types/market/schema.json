@@ -24,7 +24,7 @@
       },
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "positions": {
       "type": "relation",
@@ -37,6 +37,16 @@
       "relation": "manyToOne",
       "target": "api::sport.sport",
       "inversedBy": "markets"
+    },
+    "fKey": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "required": true,
+      "default": 0
     }
   }
 }

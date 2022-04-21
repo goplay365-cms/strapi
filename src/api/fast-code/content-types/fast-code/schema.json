@@ -31,18 +31,15 @@
       "relation": "oneToOne",
       "target": "api::position.position"
     },
-    "special_value": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "string"
-    },
     "market": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::market.market"
+    },
+    "special_value": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::special-value.special-value"
     }
   }
 }

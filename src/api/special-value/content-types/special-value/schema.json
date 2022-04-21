@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "special_values",
+  "info": {
+    "singularName": "special-value",
+    "pluralName": "special-values",
+    "displayName": "Special value"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

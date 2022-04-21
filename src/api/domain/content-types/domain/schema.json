@@ -80,40 +80,46 @@
       "relation": "oneToMany",
       "target": "api::tournament.tournament"
     },
-    "main_markets": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::market.market"
-    },
     "fast_codes": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::fast-code.fast-code"
     },
     "sport_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": true
+      }
     },
     "region_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "main_markets": {
+      "type": "component",
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
+      "component": "odd.main-market",
       "required": true
     }
   }
