@@ -16,21 +16,23 @@
     }
   },
   "attributes": {
-    "keyword": {
+    "name": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "translation": {
+    "desc": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

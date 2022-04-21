@@ -20,11 +20,11 @@
       "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "required": true,
-      "unique": true
+      "unique": false
     },
     "terms": {
       "type": "component",
@@ -34,12 +34,13 @@
           "localized": true
         }
       },
-      "component": "info-group.terms"
+      "component": "info-group.terms",
+      "required": true
     },
     "logo": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -60,7 +61,8 @@
           "localized": true
         }
       },
-      "component": "banner.carousel"
+      "component": "banner.carousel",
+      "required": true
     },
     "sideCarousel": {
       "type": "component",
@@ -70,22 +72,55 @@
           "localized": true
         }
       },
-      "component": "banner.carousel"
+      "component": "banner.carousel",
+      "required": true
     },
     "main_tournaments": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tournament.tournament"
     },
-    "main_markets": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::market.market"
-    },
     "fast_codes": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::fast-code.fast-code"
+    },
+    "sport_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "region_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "main_markets": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "odd.main-market",
+      "required": true
     }
   }
 }
