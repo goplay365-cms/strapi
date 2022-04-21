@@ -60,40 +60,63 @@ module.exports = {
     };
 
     strapi.service('api::label.label').findOne(4137)
-      .then(function (uGjend) {
-        if (uGjend) {
-          m = true;
-        }
-      })
-      .then(function () {
-          if (!m) {
-            for (const o in obj) {
-              for (const k in obj[o]) {
-                if (k !== "messages") {
-                  strapi.service('api::label.label').create({
-                    data: {
-                      id: j++,
-                      name: k,
-                      desc: obj[o][k],
-                      locale: loc(o)
-                    }
-                  })
-                } else if (k == "messages") {
-                  for (const m in obj[o][k]) {
-                    strapi.service('api::message.message').create({
-                      data: {
-                        id: l++,
-                        name: m,
-                        desc: obj[o][k][m],
-                        locale: loc(o)
-                      }
-                    });
-                  }
+    .then(function (uGjend) {
+      if (uGjend) {
+        m = true;
+      }
+    })
+    .then(function () {
+        if (!m) {
+          for (const o in obj) {
+            for (const k in obj[o]) {
+              if (k !== "messages") {
+                strapi.service('api::label.label').delete(j++);
+              } else if (k == "messages") {
+                for (const m in obj[o][k]) {
+                  strapi.service('api::message.message').delete(l++);
                 }
               }
             }
           }
         }
-      );
+      }
+    );
+
+    // strapi.service('api::label.label').findOne(4137)
+    //   .then(function (uGjend) {
+    //     if (uGjend) {
+    //       m = true;
+    //     }
+    //   })
+    //   .then(function () {
+    //       if (!m) {
+    //         for (const o in obj) {
+    //           for (const k in obj[o]) {
+    //             if (k !== "messages") {
+    //               strapi.service('api::label.label').create({
+    //                 data: {
+    //                   id: j++,
+    //                   name: k,
+    //                   desc: obj[o][k],
+    //                   locale: loc(o)
+    //                 }
+    //               })
+    //             } else if (k == "messages") {
+    //               for (const m in obj[o][k]) {
+    //                 strapi.service('api::message.message').create({
+    //                   data: {
+    //                     id: l++,
+    //                     name: m,
+    //                     desc: obj[o][k][m],
+    //                     locale: loc(o)
+    //                   }
+    //                 });
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+    //   );
   },
 };
