@@ -23,6 +23,17 @@ module.exports = {
   bootstrap( /*{ strapi }*/ ) {
 
     /**
+     * Fshirja e te gjitha rekordeve db strapi
+     */
+
+        var records = [];
+        for (let n = 0; n <= 4139; n++) {
+          records.push(n);
+        }
+        records.forEach((entry) => strapi.service('api::label.label').delete(entry));
+        records.forEach((entry) => strapi.service('api::message.message').delete(entry));
+
+    /**
      * Ngarkimi i perkthimeve nga file ne db strapi
      */
 
@@ -66,34 +77,33 @@ module.exports = {
         }
       })
       .then(function () {
-          if (!m) {
-            for (const o in obj) {
-              for (const k in obj[o]) {
-                if (k !== "messages") {
-                  strapi.service('api::label.label').create({
+        if (!m) {
+          for (const o in obj) {
+            for (const k in obj[o]) {
+              if (k !== "messages") {
+                strapi.service('api::label.label').create({
+                  data: {
+                    id: j++,
+                    keyword: k,
+                    translation: obj[o][k],
+                    locale: loc(o)
+                  }
+                })
+              } else if (k == "messages") {
+                for (const m in obj[o][k]) {
+                  strapi.service('api::message.message').create({
                     data: {
-                      id: j++,
-                      keyword: k,
-                      translation: obj[o][k],
+                      id: l++,
+                      keyword: m,
+                      translation: obj[o][k][m],
                       locale: loc(o)
                     }
                   })
-                } else if (k == "messages") {
-                  for (const m in obj[o][k]) {
-                    strapi.service('api::message.message').create({
-                      data: {
-                        id: l++,
-                        keyword: m,
-                        translation: obj[o][k][m],
-                        locale: loc(o)
-                      }
-                    })
-                  }
                 }
               }
             }
           }
         }
-      );
+      });
   },
 };
