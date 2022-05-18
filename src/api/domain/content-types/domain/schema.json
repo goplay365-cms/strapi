@@ -121,6 +121,15 @@
       },
       "component": "odd.main-market",
       "required": true
+    },
+    "footer_component": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": []
     }
   }
 }

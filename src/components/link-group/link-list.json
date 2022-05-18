@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_link_group_link_lists",
+  "info": {
+    "displayName": "Link List",
+    "icon": "list-ol",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "banner.carousel"
+    }
+  }
+}

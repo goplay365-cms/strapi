@@ -1196,6 +1196,11 @@
   dependencies:
     "@babel/runtime" "^7.6.2"
 
+"@iopanda/strapi-crack-ee@^1.0.11":
+  "integrity" "sha512-zOZmWthbhdZUinesXZgfperipeYD+77pFgNwBo9Io0Si+MeVsPzMlejnlVsYOB4/zSM9yc9BZ906NwtOvA+Mvg=="
+  "resolved" "https://registry.npmjs.org/@iopanda/strapi-crack-ee/-/strapi-crack-ee-1.0.11.tgz"
+  "version" "1.0.11"
+
 "@koa/cors@3.1.0":
   "integrity" "sha512-7ulRC1da/rBa6kj6P4g2aJfnET3z8Uf3SWu60cjbtxTA5g8lxRdX/Bd2P92EagGwwAhANeNw8T8if99rJliR6Q=="
   "resolved" "https://registry.npmjs.org/@koa/cors/-/cors-3.1.0.tgz"
