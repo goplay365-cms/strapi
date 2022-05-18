@@ -9,7 +9,6 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "@iopanda/strapi-crack-ee": "^1.0.11",
     "@strapi/plugin-i18n": "4.1.7",
