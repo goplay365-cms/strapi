@@ -1,10 +1,10 @@
 {
-  "kind": "collectionType",
-  "collectionName": "domains",
+  "kind": "singleType",
+  "collectionName": "sites",
   "info": {
-    "singularName": "domain",
-    "pluralName": "domains",
-    "displayName": "Domain",
+    "singularName": "site",
+    "pluralName": "sites",
+    "displayName": "Site",
     "description": ""
   },
   "options": {
@@ -20,22 +20,20 @@
       "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
-      },
-      "required": true,
-      "unique": false
+      }
     },
     "terms": {
       "type": "component",
       "repeatable": true,
+      "component": "info-group.terms",
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "info-group.terms",
-      "required": true
+      }
     },
     "logo": {
       "type": "media",
@@ -49,33 +47,33 @@
       ],
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       }
     },
     "mainCarousel": {
       "type": "component",
       "repeatable": true,
+      "component": "banner.carousel",
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "banner.carousel",
-      "required": true
+      }
     },
     "sideCarousel": {
       "type": "component",
       "repeatable": true,
+      "component": "banner.carousel",
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "banner.carousel",
-      "required": true
+      }
     },
-    "main_tournaments": {
+    "tournaments": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tournament.tournament"
@@ -90,11 +88,14 @@
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos",
+        "audios"
       ],
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       }
     },
@@ -103,33 +104,36 @@
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos",
+        "audios"
       ],
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       }
     },
     "main_markets": {
       "type": "component",
       "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
       "component": "odd.main-market",
-      "required": true
-    },
-    "footer_component": {
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "type": "dynamiczone",
-      "components": []
+      }
+    },
+    "footer1": {
+      "type": "richtext",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
