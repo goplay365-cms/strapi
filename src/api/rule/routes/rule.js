@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * language router.
+ * rule router.
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::language.language');
+module.exports = createCoreRouter('api::rule.rule');
