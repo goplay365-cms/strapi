@@ -4,7 +4,7 @@
   "info": {
     "singularName": "message",
     "pluralName": "messages",
-    "displayName": "Message",
+    "displayName": "Lang-Message",
     "description": ""
   },
   "options": {
@@ -33,6 +33,20 @@
       },
       "type": "text",
       "required": true
+    },
+    "type": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Info",
+        "Success",
+        "Warning",
+        "Error"
+      ]
     }
   }
 }

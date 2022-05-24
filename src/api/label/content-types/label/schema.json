@@ -4,7 +4,7 @@
   "info": {
     "singularName": "label",
     "pluralName": "labels",
-    "displayName": "Label",
+    "displayName": "Lang-Label",
     "description": ""
   },
   "options": {
@@ -19,13 +19,13 @@
     "name": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "string",
       "required": true
     },
-    "desc": {
+    "value": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -33,6 +33,18 @@
       },
       "type": "string",
       "required": true
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }

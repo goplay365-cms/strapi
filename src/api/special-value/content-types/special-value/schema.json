@@ -4,7 +4,8 @@
   "info": {
     "singularName": "special-value",
     "pluralName": "special-values",
-    "displayName": "Special value"
+    "displayName": "Market-Special value",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

@@ -48,6 +48,12 @@
       "required": true,
       "type": "integer",
       "default": 0
+    },
+    "rules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rule.rule",
+      "mappedBy": "sport"
     }
   }
 }
