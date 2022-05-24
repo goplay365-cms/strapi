@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "style_resources",
+  "info": {
+    "singularName": "style-resource",
+    "pluralName": "style-resources",
+    "displayName": "StyleResource",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cssURL": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "jsURL": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "fontURL": {
+      "type": "string"
+    },
+    "customCSS": {
+      "type": "text"
+    },
+    "customJS": {
+      "type": "text"
+    },
+    "sportIconSVG": {
+      "type": "text"
+    },
+    "mainColor1": {
+      "type": "string",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "mainColor2": {
+      "type": "string"
+    },
+    "secondaryColor1": {
+      "type": "string",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "secondaryColor2": {
+      "type": "string",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    }
+  }
+}

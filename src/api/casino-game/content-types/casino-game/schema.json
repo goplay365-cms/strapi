@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "casino_games",
+  "info": {
+    "singularName": "casino-game",
+    "pluralName": "casino-games",
+    "displayName": "Casino-Game",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "thumb": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "isEnabled": {
+      "type": "boolean"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "descInternal": {
+      "type": "string"
+    },
+    "idInternal": {
+      "type": "integer"
+    },
+    "casino_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::casino-tag.casino-tag",
+      "inversedBy": "casino_games"
+    },
+    "casino_provider": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::casino-provider.casino-provider",
+      "inversedBy": "casino_games"
+    }
+  }
+}
