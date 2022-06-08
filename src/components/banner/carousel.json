@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_banner_carousels",
+  "info": {
+    "displayName": "Carousel Slide",
+    "icon": "desktop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

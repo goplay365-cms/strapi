@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fast_codes",
+  "info": {
+    "singularName": "fast-code",
+    "pluralName": "fast-codes",
+    "displayName": "Market-Fast Code",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "position": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::position.position"
+    },
+    "market": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::market.market"
+    },
+    "special_value": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::special-value.special-value"
+    }
+  }
+}

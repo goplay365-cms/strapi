@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_odd_main_markets",
+  "info": {
+    "displayName": "Main Market",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "market": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::market.market"
+    },
+    "special_values": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::special-value.special-value"
+    }
+  }
+}
